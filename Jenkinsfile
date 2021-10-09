@@ -15,7 +15,7 @@ pipeline {
     stage('Build') {
             steps {
                 echo '开始编译构建'
-                sh '''docker build -t bcyup/agones:pipe111'''
+                sh '''docker build -t bcyup/agones:pipe111 -f 	php-fpm_dockerfile	.'''
             }
     }
     stage('Push') {
